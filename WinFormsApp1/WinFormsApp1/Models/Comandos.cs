@@ -18,6 +18,8 @@ namespace WinFormsApp1.Models
         CaptureScreen,
         SendFile,
         ReceiveFile,
-        OpenNotepad
+        OpenNotepad,
+        StreamStart,
+        StreamStop,
     }
 }

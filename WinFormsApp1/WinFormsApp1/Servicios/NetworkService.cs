@@ -124,6 +124,11 @@ namespace ServidorControlRemoto.Services
                 case CommandType.OpenNotepad:
                     Process.Start("notepad.exe");
                     break;
+                case CommandType.MouseClick:
+                    var clickCoords = (Tuple<int, int>)command.Data;
+                    MouseKeyboardControl.MouseClick(clickCoords.Item1, clickCoords.Item2);
+                    break;
+                    
 
                 default:
                     break;
@@ -132,8 +137,7 @@ namespace ServidorControlRemoto.Services
 
         private async Task SendScreenshotAsync(NetworkStream stream)
         {
-            // Usar ScreenCapture.Capture() para obtener la imagen
-            // Comprimir y enviar por 'stream'
+          
             byte[] screenshotData = await ScreenCapture.CaptureAsync();
             await stream.WriteAsync(screenshotData, 0, screenshotData.Length);
         }

@@ -3,6 +3,23 @@ using System.Runtime.InteropServices;
 
 public static class MouseKeyboardControl
 {
+    
+    public static void MouseClick(int x, int y)
+    {
+        MoveMouse(x, y); // Move the mouse to the specified coordinates
+        // Simulate a mouse click
+        mouse_event(MouseEventFlags.LeftDown | MouseEventFlags.LeftUp, x, y, 0, 0);
+    }
+
+    [DllImport("user32.dll", SetLastError = true)]
+    private static extern void mouse_event(MouseEventFlags dwFlags, int dx, int dy, int dwData, int dwExtraInfo);
+
+    [Flags]
+    private enum MouseEventFlags : uint
+    {
+        LeftDown = 0x0002,
+        LeftUp = 0x0004
+    }
     // Importar funciones de user32.dll
     [DllImport("user32.dll")]
     private static extern void mouse_event(uint dwFlags, uint dx, uint dy, uint dwData, IntPtr dwExtraInfo);

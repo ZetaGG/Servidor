@@ -3,7 +3,7 @@ namespace WinFormsApp1.Utilidades;
 
     public static class Logger
     {
-        private static readonly string LOG_FILE = @"C:\ServidorControlRemoto\log.txt";
+        private static readonly string LOG_FILE = @"C:\Users\zetag\OneDrive\Documentos\log.txt";
 
         public static void Log(string message)
         {

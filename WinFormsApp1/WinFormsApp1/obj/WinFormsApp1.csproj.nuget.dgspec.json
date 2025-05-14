@@ -13,8 +13,12 @@
         "packagesPath": "C:\\Users\\zetag\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\zetag\\RiderProjects\\Servidor\\WinFormsApp1\\WinFormsApp1\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\zetag\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\zetag\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config"
         ],
         "originalTargetFrameworks": [
           "net9.0-windows"
